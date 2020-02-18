@@ -1,0 +1,116 @@
+---
+title             : "Comprehension of Sentential Negation in Toddlers"
+shorttitle        : "Comprehension of Negation in Toddlers"
+
+author: 
+  - name          : "First Author"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Postal address"
+    email         : "my@email.com"
+  - name          : "Ernst-August Doelle"
+    affiliation   : "1,2"
+
+affiliation:
+  - id            : "1"
+    institution   : "Wilhelm-Wundt-University"
+  - id            : "2"
+    institution   : "Konstanz Business School"
+
+authornote: |
+  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+
+  Enter author note here.
+
+abstract: |
+  Previous research suggests that children understand truth-conditional negation 
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib","references.bib"]
+
+floatsintext      : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+library(jpeg)
+library(grid)
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+# Introduction
+
+## Previous Research
+
+Austin, Theakston, Lieven, & Tomasello (2014)
+
+Feiman, Mody, Sanborn, and Carey (2017)
+
+de Carvalho, Barrault, and Christophe (2017) pinguin cartwheeling: the essence of their finding is what we test in this study.
+
+Hungarian study
+
+## Current Study
+
+# Experiment 1
+
+## Methods
+
+We conducted a looking time study that paired linguistic audio stimuli with images of objects appearing on a screen. The linguistic stimuli were simple sentences of the general form "this is [adverb] a [noun]" (e.g. "this is really a ball" vs. "this is not a ball"). The images were objects described by the noun (e.g. a ball). There were 6 adverbs (*really*,*indeed*,*only*,*just*,*now*, and *not*) and 3 nouns (*ball*, *dog*, and *shoe*) resulting in 18 total trials. The dependent measure was how long toddlers looked at the screen. Figure \@ref(fig:methodfig) shows the design of the experiment.
+
+```{r methodfig, fig.env="figure", fig.width=4.5 ,fig.cap="Study design, habituation, and test phases of the current study. Curley brackets represent within-participant randomized blocks while arrows represent between-participant randomization of trials."}
+methodfig <- readJPEG("figs/negcom.jpg")
+grid.raster(methodfig)
+```
+
+### Participants & Materials
+N toddlers in the age range of 18 to 30 months were tested. The experiment only used three images: a tennis ball, a dog, and a shoe (Figure). Images were selected from a free online repository. Using the MB-CDI data available through Wordbank [@frank2016wordbank], we made sure that half of toddlers in that age range produce the corresponding nouns (*ball*, *dog*, and *shoe*) by 18 months and almost all toddlers produce them by age 24 months. 18 linguistic stimuli were recorded corresponding to the 18 combinations of adverbs and nouns. Recordings are available on the study's online repository.
+
+### Procedure
+
+The study consisted of two phases: habituation and test. In habituation trials, toddlers heard positive sentences of the general form "this is [adverb] a [noun]". Adverbs were randomly selected from the following set: *indeed*, *really*, *just*, *only*. After the adverb was selected, nouns were randomly selected from the following set: *ball*, *dog*, *shoe*. Nouns were randomized within the the adverb blocks, and adverb blocks were in turn randomized as well. In each trial, first an attention getter appeard in the middle of the screen. When toddlers looked at the screen the object appeard and the audio of the sentence was played. The sentence was repeated three times. Trial ended when toddlers looked away for more than 2 seconds. All the sentences during the habituation phase were true of the pictures presented on the screen. In ther words, the adverbs did not alter the truth conditions of the statement. The habituation phase continued until toddler's mean looking time for three consecutive trials was reduced to 50% of the mean looking time of their first three trials (Cohen and Gelber, 1975). After infants reached this criterion or were done with all 12 habituation trials, we started the test phase.
+
+The test phase had two between-participant conditions: positive (control) and negative. The positive condition used the adverb *now* and was similar to the habituation phase in that the adverb was positive and did not alter the truth conditions of the statement. The negative condition used the adverb *not* which altered the truth conditions of the statement. Only in such negative trials, the statement was false with respect to the image on the screen. We predicted that if toddlers are sensitive to the truth conditional contributions of the adverb *not*, they will dishabituate in the negative condition but not the positive (control) condition.
+
+## Results
+
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+## Discussion
+
+# Experiment 2
+
+# Appendix
+
+\newpage
+
+# References
+```{r create_r-references}
+r_refs(file = "r-references.bib")
+```
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id = "refs"></div>
+\endgroup
