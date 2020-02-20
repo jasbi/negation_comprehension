@@ -73,6 +73,8 @@ Hungarian study
 
 # Experiment 1
 
+In the first experiment we focused on todders' ability to react to the truth altering property of negation. We habituated toddlers to positive and truth-preserving adverbs like *really* as in "this is really a dog". Then we tested them with either the similar adverb *now* or the negative and truth-altering adverb *not*. We predicted that if toddlers are sensitive to the functional role of negation in altering the truth conditions of statemets, they should dishabituate when they notice the change in truth conditions that no longer match visual stimuli truthfully.
+
 ## Methods
 
 We conducted a looking time study that paired linguistic audio stimuli with images of objects appearing on a screen. The linguistic stimuli were simple sentences of the general form "this is [adverb] a [noun]" (e.g. "this is really a ball" vs. "this is not a ball"). The images were objects described by the noun (e.g. a ball). There were 6 adverbs (*really*,*indeed*,*only*,*just*,*now*, and *not*) and 3 nouns (*ball*, *dog*, and *shoe*) resulting in 18 total trials. The dependent measure was how long toddlers looked at the screen. Figure \@ref(fig:methodfig) shows the design of the experiment.

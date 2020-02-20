@@ -1,0 +1,73 @@
+---
+title: "Design, Procedure, and Randomization"
+author: "Masoud Jasbi"
+date: ""
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: false
+---
+
+# Design
+
+## Pictures
+
+## Audio Stimuli
+
+```{r all_trials, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+habituation_adverb = c("really", "just", "indeed", "only")
+test_adverb = c("now", "not")
+noun = c("ball","dog", "shoe")
+
+rep(sample(habituation_adverb),each=3)
+sample(noun)
+
+```
+
+# Procedure 
+
+
+
+# Randomization
+
+First randomly select an adverb, then randomly select an image, then randomly select "now" 
+
+```{r randomization}
+#shuffle the row orders
+randomized_trials <- all_trials[sample(1:nrow(all_trials)), ]
+
+# assign numbers to the trials, pick 2 per trial type
+participant_trials <- 
+  randomized_trials %>%
+  group_by(trial_type) %>%
+  mutate(n=row_number()) %>%
+  filter(n==1 | n==2)
+
+# Take the warmup trials and put them at the front
+warmup_trials <- 
+  participant_trials %>%
+  filter(trial_type=="X.X" & n==1 | trial_type=="X.Z" & n==1)
+
+# put the rest of the trials as test trials
+test_trials <- 
+  participant_trials %>%
+  filter(trial_type!="X.X" | n!=1, trial_type!="X.Z" | n!=1)
+
+# bind the warmup and test trials
+trials <- rbind (warmup_trials, test_trials)
+
+# add the subject id
+subid <- paste(date(now()), hour(now()), minute(now()), sep="-")
+trials[,"id"] <- subid
+
+# remove column n
+trials <- select(trials, -n)
+
+write.csv(trials, paste(subid,".csv", sep=""))
+knitr::kable(trials)
+```
+
