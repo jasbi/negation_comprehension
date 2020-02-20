@@ -77,9 +77,9 @@ In the first experiment we focused on todders' ability to react to the truth alt
 
 ## Methods
 
-We conducted a looking time study that paired linguistic audio stimuli with images of objects appearing on a screen. The linguistic stimuli were simple sentences of the general form "this is [adverb] a [noun]" (e.g. "this is really a ball" vs. "this is not a ball"). The images were objects described by the noun (e.g. a ball). There were 6 adverbs (*really*,*indeed*,*only*,*just*,*now*, and *not*) and 3 nouns (*ball*, *dog*, and *shoe*) resulting in 18 total trials. The dependent measure was how long toddlers looked at the screen. Figure \@ref(fig:methodfig) shows the design of the experiment.
+We conducted a looking time study that paired linguistic audio stimuli with images of objects appearing on a screen. The linguistic stimuli were simple sentences of the general form "this is [adverb] a [noun]" (e.g. "this is really a ball" vs. "this is not a ball"). The images were objects described by the nouns (e.g. a ball). There were 6 adverbs (*really*,*indeed*,*only*,*just*,*now*, and *not*) and 3 nouns (*ball*, *dog*, and *shoe*) resulting in 18 total possible trials. The dependent measure was how long toddlers looked at the screen. Figure \@ref(fig:methodfig) shows the design of the experiment.
 
-```{r methodfig, fig.env="figure", fig.width=4.5 ,fig.cap="Study design, habituation, and test phases of the current study. Curley brackets represent within-participant randomized blocks while arrows represent between-participant randomization of trials."}
+```{r methodfig, fig.env="figure", fig.width=4.5 ,fig.cap="Study design, habituation, and test phases of the current study. Curly brackets represent within-participant randomized blocks while arrows represent between-participant randomization of trials."}
 methodfig <- readJPEG("figs/negcom.jpg")
 grid.raster(methodfig)
 ```
