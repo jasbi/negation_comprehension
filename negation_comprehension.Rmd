@@ -61,15 +61,53 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 ## Previous Research
 
-Austin, Theakston, Lieven, & Tomasello (2014)
+<!--
+DIMENTION 1 = NEGATION TYPE
+No: Austin, Theakston, Lieven, & Tomasello (2014), Feiman, Mody, Sanborn, and Carey (2017); Nordmeyer and Frank (2014)
+Not: Donaldson (1970), De Villier and Flusberg (1975), Pea (1980;1982), Kim (1985), Austin, Theakston, Lieven, & Tomasello (2014), Feiman, Mody, Sanborn, and Carey (2017), 
+didn't: Reuter, Feiman, Snedeker (2018)
+pas: de Carvalho, Barrault, and Christophe (2017)
+
+DIMENTION 2 = ARGUMENT TYPE
+Predicative NP + not: De Villier and Flusberg (1975), Pea (1980;1982), Kim (1985), de Carvalho, Barrault, and Christophe (2017)
+Locative-PP + No/Not: Feiman, Mody, Sanborn, and Carey (2017), Austin, Theakston, Lieven, & Tomasello (2014)
+Transitive-Verb + didn't: Reuter, Feiman, Snedeker (2018)
+Det-No + Noun: Nordmeyer and Frank (2014)
+
+DIMENTION 2 = METHOD
+Picture verification + sentence-completion: Donaldson (1970), De Villier and Flusberg (1975)
+Picture verification + judgments: Slobin (1966), Kim (1985)
+Picture verification + spontaneous feedback: Pea (1980; 1982) 
+Picture verificatioin + eye-tracking: Reuter, Feiman, Snedeker (2018), Nordmeyer and Frank (2014)
+Hide-and-seek with search behavior: Feiman, Mody, Sanborn, and Carey (2017), Austin, Theakston, Lieven, & Tomasello (2014)
+Picture verification with looking-time: de Carvalho, Barrault, and Christophe (2017)
+
+Other: Donaldson (1970) - Hummer, Wimmer, & Antes (1993)
+-->
+
+Research on comprehension of negation has used multiple methods tested children's comprehension using differentiof negated identity (e.g. *this is not a banana*), negated location (**)
+
+Slobin (1966) was the first to test children's comprehension of negation. He used a sentence verification task in which participants saw a picture, heard a positive or a negative sentence, and had to press one of two buttons to determine wehther the sentence was "right" or "wrong". 
+
+Unfortunately Slobin did not report the details of data on children's errors. This is what Donaldson (1970) did and reported that five-year-olds make substantial errors. 
+
+De Villier and Flusberg (1975) imrpoved on Donaldson's work and showed much earlier comprehension.
+
+Pea (1982) and Kim (1985) were the first to talk about truth-functional negation and test it experimentally. 
+
+Austin, Theakston, Lieven, & Tomasello (2014) pointed out that there may be pragmatic issues with denial negation in picture verification tasks. Instead they advocated for information regarding location of nonvisible objects. 
 
 Feiman, Mody, Sanborn, and Carey (2017)
 
-de Carvalho, Barrault, and Christophe (2017) pinguin cartwheeling: the essence of their finding is what we test in this study.
+Reuter, Feiman, Snedeker (2018)
 
-Hungarian study
+de Carvalho, Barrault, and Christophe (2017) tested comprehension of French negation in 18-month-olds using a word learning paradigm. 
+
+The trend in experimental research on comprehension of negation in children has been one of improving methods and capturing earlier comprehension than before. 
 
 ## Current Study
+
+This study tests toddler's comprehension of verbal negation in sentences that deny the identity of an entity (e.g. *this is not a cat*). 
 
 # Experiment 1
 

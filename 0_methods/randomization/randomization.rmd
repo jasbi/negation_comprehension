@@ -1,5 +1,5 @@
 ---
-title: "Design, Procedure, and Randomization"
+title: "Design, Stimuli, and Randomization"
 author: "Masoud Jasbi"
 date: ""
 output: 
@@ -12,62 +12,50 @@ output:
 
 # Design
 
-## Pictures
+# Stimuli
 
-## Audio Stimuli
+There are 3 images of a ball, a dog, and a shoe.
 
-```{r all_trials, message=FALSE, warning=FALSE}
-library(tidyverse)
+## Procedure
 
+## Randomization
+
+The output should be a csv file with rows as participants and 1 column that has a python dictionary of all trials for the participant.
+
+Fully random except make sure equal number of participants in control and test.
+
+```{r randomization}
+# define habituation adverbs, test adverbs, and nouns
 habituation_adverb = c("really", "just", "indeed", "only")
 test_adverb = c("now", "not")
 noun = c("ball","dog", "shoe")
 
-rep(sample(habituation_adverb),each=3)
-sample(noun)
+# shuffle the test adverbs
+test_adverb <- sample(test_adverb)
 
+# shuffle habituation adverbs, repeat each three times, pick a test adverb repeat it three times, do the same for another participant but pick the other test adverb for them
+adverbs1 <- c(rep(sample(habituation_adverb),each=3), rep(test_adverb[1], each=3))
+adverbs2 <- c(rep(sample(habituation_adverb),each=3), rep(test_adverb[2], each=3))
+
+# shuffle the nouns and then repeat them 5 times to create 15 trials
+nouns1 <- c()
+for (i in 1:4){
+  nouns1 <- c(nouns1, sample(noun))
+}
+
+# do it again for participant 2
+nouns2 <- c()
+for (i in 1:4){
+  nouns2 <- c(nouns2, sample(noun))
+}
+
+# concatenate adverbs and nouns for participants 1 and 2
+participant1 <- paste(adverbs1, nouns1, sep="_")
+participant2 <- paste(adverbs2, nouns2, sep="_")
+
+# create the randomized trials for 2 participants
+data.frame(participant1, participant2)
 ```
 
 # Procedure 
-
-
-
-# Randomization
-
-First randomly select an adverb, then randomly select an image, then randomly select "now" 
-
-```{r randomization}
-#shuffle the row orders
-randomized_trials <- all_trials[sample(1:nrow(all_trials)), ]
-
-# assign numbers to the trials, pick 2 per trial type
-participant_trials <- 
-  randomized_trials %>%
-  group_by(trial_type) %>%
-  mutate(n=row_number()) %>%
-  filter(n==1 | n==2)
-
-# Take the warmup trials and put them at the front
-warmup_trials <- 
-  participant_trials %>%
-  filter(trial_type=="X.X" & n==1 | trial_type=="X.Z" & n==1)
-
-# put the rest of the trials as test trials
-test_trials <- 
-  participant_trials %>%
-  filter(trial_type!="X.X" | n!=1, trial_type!="X.Z" | n!=1)
-
-# bind the warmup and test trials
-trials <- rbind (warmup_trials, test_trials)
-
-# add the subject id
-subid <- paste(date(now()), hour(now()), minute(now()), sep="-")
-trials[,"id"] <- subid
-
-# remove column n
-trials <- select(trials, -n)
-
-write.csv(trials, paste(subid,".csv", sep=""))
-knitr::kable(trials)
-```
 
