@@ -31,7 +31,7 @@ calcHabOver,[]
 stimPres,0
 stimPath,stimuli/
 stimNames,"{'really_ball': [], 'really_dog': [], 'really_shoe': []}"
-stimList,"{'really_ball_test': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/really_ball_test.m4a', 'imageLoc': 'stimuli/ball.jpg'}}"
+stimList,"{'really_dog': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/really_ball_test.m4a', 'imageLoc': 'stimuli/dog.jpeg'}}"
 screenWidth,1080
 screenHeight,700
 screenColor,black
