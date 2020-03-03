@@ -1,0 +1,3 @@
+snum,months,days,sex,cond,GNG,gazeOnOff,trial,trialType,startTime,endTime,duration
+1,230,2,,,1,1,1,really,0,11.290652272000443,11.290652272000443
+1,230,2,,,1,0,1,really,11.29065482400074,13.290899211999204,2.000244387998464

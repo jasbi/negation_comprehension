@@ -1,0 +1,2 @@
+sNum,sID,months,days,sex,cond,condLabel,trial,GNG,trialType,stimName,habCrit,habTrialNo,sumOnA,numOnA,sumOffA,numOffA,sumOnB,numOnB,sumOffB,numOffB
+1,test,230,2,,,,1,1,really,ball.jpg,0,,1.7660815559993353,12,3.2813958870046918,12,0,0,5.047497101000772,1
