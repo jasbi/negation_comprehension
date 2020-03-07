@@ -10,6 +10,10 @@ output:
       collapsed: false
 ---
 
+```{r}
+library(jsonlite)
+```
+
 # Design
 
 # Stimuli
@@ -54,7 +58,9 @@ participant1 <- paste(adverbs1, nouns1, sep="_")
 participant2 <- paste(adverbs2, nouns2, sep="_")
 
 # create the randomized trials for 2 participants
-data.frame(participant1, participant2)
+randomization <- data.frame(participant1, participant2)
+
+write_json(randomization, "randomization")
 ```
 
 # Procedure 
