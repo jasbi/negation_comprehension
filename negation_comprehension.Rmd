@@ -1,21 +1,21 @@
 ---
-title             : "Comprehension of Sentential Negation in Toddlers"
+title             : "Comprehension of Negation in Toddlers"
 shorttitle        : "Comprehension of Negation in Toddlers"
 
 author: 
-  - name          : "First Author"
+  - name          : ""
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
     address       : "Postal address"
     email         : "my@email.com"
-  - name          : "Ernst-August Doelle"
-    affiliation   : "1,2"
+  - name          : ""
+    affiliation   : "1"
 
 affiliation:
   - id            : "1"
-    institution   : "Wilhelm-Wundt-University"
+    institution   : ""
   - id            : "2"
-    institution   : "Konstanz Business School"
+    institution   : ""
 
 authornote: |
   Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
@@ -45,10 +45,11 @@ classoption       : "man"
 output            : papaja::apa6_pdf
 ---
 
-```{r setup, include = FALSE}
+```{r libraries}
 library("papaja")
 library(jpeg)
 library(grid)
+library(png)
 ```
 
 ```{r analysis-preferences}
@@ -59,59 +60,63 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Introduction
 
+A sign outside a taqueria reads: "*everything either is or is not a taco*". Apart from being true, and humerous, the sign is a good reminder of something deep about human language and thought. We are capable of forming and communicating abstract categories and concepts that go beyond what we experience. Negation is perhaps the best example of this capacity. It is an abstract concept that allows us to partition our conceptual space and bring under one umbrella, a variety of concepts that have nothing in common other than simply "not being something"; for example not beeing a taco! Most importantly, negation operates in a combinatorial and productive manner, allowing us to form negative concepts from any existing positive one. How does this capacity emerge in humans? What is the role of language? Does it have a single origin, or does it develop gradually through abstraction in multiple conceptual domains?
+
+Previous research has proposed several possible origins for abstract and combinatorial negation including the hypothesized primitive concepts of "non-existence" and "rejection" [@bloom1970language]. In this paper, we consider and test a hypothesis that to our knowledge has not been explored before: that abstract combinatorial negation originates from word learning and the act of labeling, specifically labeling concrete objects with nominals. In short, negation allows the learner to know which entities are referred to by a label as well as which entities fall outside its extension. An important prediction of this hypothesis is that comprehension of negation emerges first in the context of labeling and word learning. In the next section, we provide a comprehensive review of previous experimental literature on the comprehension of negation, and show that the literature provides some initial support for this hypothesis. However, an important confound is that previous studies have used different methods and dependent measures in different linguistic contexts. As explained in Section \@ref(current-study), this paper tests toddler's comprehension of negation in different linguistic contexts within the same paradigm and using the same dependent measure. Experiment 1 tests todderls comprehension with predicative nominals in a the context of labeling. Experiment 2 tests their comprehension with locative prepositions, and Experiment 3 with simple transitives. Section ? presents our general discussion and conclusions.
+
 ## Previous Research
 
+We classify the literature on comprehension of negation along three dimensions: 1. which negative morpheme was investigated, 2. what type of argument the negative morpheme composed with, and 3. which experimental method was used to test children's comprehension. Comparison of studies along the first dimension reveals morpheme-specific development. Comparison along the second dimension shows how productive and compositional early negation is across constructions, and finally, the third dimension helps us see how successful different methods are in capturing children's competence with negation.
+
+With respect to negative morphemes, previous work has tested children's comprehension of the English *no* [@austin2014denial; @feiman2017nonot; @nordmeyer2014negation], *not* [@slobin1966grammatical; @donaldson1970developmental; @deVilliersFlusberg1975; @pea1980logic; @pea1982origins; @kim1985development; @austin2014denial; @feiman2017nonot], and the clitic *'nt* [@reuter2018no], as well as Korean *ani* [@kim1985development], German *nein* [@hummer1993origins] and French *ne ... pas* [@deCarvalhoEtal2017]. With respect to the type of argument, these negative morphemes composed with predicative nominals such as "(not) a dog" [@deVilliersFlusberg1975; @pea1980logic; @pea1982origins; @kim1985development; @hummer1993origins; @deCarvalhoEtal2017] and "(no) apples" [@nordmeyer2014negation], locative prepositional phrases such as "(not) in the bucket" [@austin2014denial; @feiman2017nonot], or transitive present tense [@slobin1966grammatical] and past tense verb phrases [@reuter2018no] such as "(not) chasing the dog" and "(didn't) break one of the plates". Finally these studies used a variety of methods including picture verification with sentence completion, metalinguistic judgments, spontaneous verbal feedback, eye-tracking, and looking time as well as search behavior in a hide-and-seek paradigm and finally verbal elicitation tasks. Each of the three dimensions discussed above can affect the age at which children are shown to succeed in an experimental task. In what follows, we provide a brief summary of the results and conclusions of previous research, explaining how they fit this overall classificaiton. Figure \@ref(fig:litreview) provides a graphic summary.
+
+```{r litreview, fig.env="figure", fig.cap="Graphic summary of the literature on comprehension of negation. The x-axis shows child age in years and months. The y-axis shows the negative morphemes and the type of linguistic constructions it combined with. Arrows show the age of success in each experiment. Boxes show where the experiments in this study fit the literature."}
+litreview <- readPNG("figs/litreview.png")
+grid.raster(litreview)
+```
+
+<!-- rules vs. exceptions, role of pragmatics, Wason's plausible denial -->
+Early work on children's comprehension of negation was inspired by Wason's [-@wason1959processing; -@wason1961response] finding that in the absence of context, negative statements take longer to process than affirmative ones. @slobin1966grammatical tested comprehension of *not* in 6, 8, 10, and 12-year-olds as well as adults in present tense transitive sentences such as "the cat is not chasing the dog", using a picture verification task with metalinguistic judgments. Participants saw a picture, heard a positive or a negative sentence, and had to press one of two buttons to determine whether the sentence was "right" or "wrong". The main dependent measure was how quickly participant responded. Confirming Wason's findings, the study reported the following order of response times: true-affirmatives < false-affirmatives < false-negatives < true-negatives. The study reported an error rate of 18.2% for 6-year-olds but did not provide further explanations on error patterns. 
+
+@wason1965contexts had also showed that the pragmatics of the task, specifically whether a negative statement is expected or plausible given the context facilitates processing of negative sentences. @donaldson1970developmental tested 155 5-to-7-year-olds on a sentence completion and sentence comprehension task. In the sentence completion task, children saw 5 yellow circles in a row and a blue circle below them, and they had to complete a statment about the last circle such as "this circle is not ...". In the sentence comprehension task, children saw a card with four shapes: black square, black circle, green square, green circle. The experimenter said she had a shape in mind and said the shape was "not a green square". Children had to guess which shape the experimenter had in mind. @donaldson1970developmental did not find Wason's pragmatic facliation with her sample but her results showed important task-based performance. In the sentence completion task, children were 100% correct with positive sentences and only around 36% correct with negative ones. With sentence comprehension, however, children's responses to simple negative statements were about 90% correct. 
+
+@deVilliersFlusberg1975 simplified the task in @donaldson1970developmental by changing abstract shapes to everyday objects like a row of cars and single bottle, and tested 2-to-4-year-old children with plausible and implausible sentence completion. In plausible trials the experimenter pointed to the bottle and said "this is not a ..." (expected answer: car) while in implausible trials she pointed to one of the cars and said "this is not a ..." (expected answer: bottle). They found that all age groups responded to plausible negatives faster than implausible negatives. They also found relatively low rates of errors across age ranges (12.5% in two-year-olds, 5% in three-year-olds, and 4% in four-year-olds), with the majority of them occurring with implausible negatives. The error rate is substantially lower than what is reported in @donaldson1970developmental or @slobin1966grammatical for much older children. @deVilliersFlusberg1975 provided evidence that even some two-year-olds could comprehend *not* and complete negative sentences sucessfully.
+
+<!-- early work on logical concept development -->
+Following @inhelder1958growth, @feldman1972 was the first to bring up the importance of linguistic negation for abstract concept formation and tested children in controlled experiments. She reported five experiments on hunderds of children between the ages of 3 and 7 years. In these experiments, 18 wooden blocks with 3 shapes (star, circle, square) and 3 colors (red, green, black) were used with different forms of commands like "give me the things that are *not* black". The negative morpheme was always *not* and it combined with adjectives like *black* or plural nominals like *squares* or *circles*. Correct responses were those in which all objects that did not have the attribute were handed to the experimenter. The studies reported slow improvement in performance from age 3, with 6-7 year-olds reaching an asymptote with about 68% correct responses in trials with negation, compared to 91% correct in trials without negation. However, the study found that this is partly due to the large number of blocks that have to be handed to the experimenter. Performance improved when the number of blocks was reduced. Again, task-based confounds seemed to have underestimatd children's competence with negation.
+
+Pea [-@pea1980logic; -@pea1982origins] was also interested in the relation between language and logical thought. He used a picture verification task and tested 40 children, 10 in each age range of 18, 24, 30, and 36 months. Children were presented with a picture (e.g. a ball) and the experimenter described the picture using a true affirmative (e.g. "that's the ball"), false affirmative (e.g. "that's the duck"), true negative (e.g. "that's not the duck"), or false negative statement (e.g. "that's not the ball"). The dependent measure was how often children corrected the experimenter by saying "no" or providing the right label. With false affirmatives, 24 and 36-month-olds provided the right lable more often. On the other hand, 30 and 36-moth-olds but not younger children provided more corrections by saying "no". With false negatives, 24-, 30-, and 36-month-olds provided the correct lable more often but did not provide many corrections with "no". Overall, the results suggested some success with the comprehension of negation in the 24-36 months age range.
+
+@kim1985development used a similar picture verification task, but instead participants had to provide explicit metalinguistic judgments. She tested English and Korean-speaking three-to-six-year-olds. Children saw pictures of common objects, heard a puppet describe them with an affirmative or a negative sentence (e.g. "*this is not an apple*"), and had to judge whether the puppet was "right" or not (truth-value judgment task). The study found substantial proportions of errors (48% overall) in children's judgments of true negatives (e.g. "*this is not an apple*" when the picture was a banana). She concluded that the majority of children under five years of age had difficulty with negative sentences. Using slighly different methods, however, @hummer1993origins reached the opposite conclusion. They tested one-to-three-year-old German-speaking children with similar linguistic stimuli, except that statements were turned into questions (e.g. "*is this an apple?*") and the dependent measure was children's yes/no responses. They found that between the ages of 2;4-2;7, 86% of children's "no" resposnes were correct. Younger children provided the correct label, incorrectly said "yes", or provided "other" types of answers and vocalisations. Overall, studies on children's development of logical language and thought showed the importance of task demands and the choice of dependent measure in estimates of children's success or failure with linguistic negation. Metalinguistic judgments [e.g. @kim1985development] or tasks that involve many objects and several actions to be carried out [e.g. @feldman1972] may be less likely to show success with younger children. Tasks that rely on children's spontaneous reactions [e.g. @pea1980logic; @pea1982origins] or simple yes/no responses to questions [e.g. @hummer1993origins] may have a better chance of sucess with young children.
+
+<!-- the role of context + eye-tracking -->
+A few studies have used children's eye-movements as their dependent measures. @nordmeyer2014negation tested the comprehension of the determiner *no* with plural nominals in commands like "look at the boy who has no apples". Two- to four-year-olds and adults looked at items like the picture of two boys, one with no apples and one with two apples. Only four-year-olds and adults looked at the boy with no apples when they heard the command. In a second experiment, they tested participants with items like the picture of two boys, one with two apples and one with two gifts. This time three-year-olds also looked at the boy without the apples after hearing the negative command. In both experiments, the eye-movements of two-year-olds in positive and negative trials were similar, providing no evidence for comprehension of negation. 
+
+@reuter2018no tested children's comprehension of past tense auxiliary negator *didn't*, composing with transitive verbs like *break* and *close* in sentence like "DW didn't break one of the plates" (experiment 1) or "show me the one DW didn't break" (experiment 2). Participants (two- and three-year-olds) saw pictures of two objects on the screen, one with the change of state due to the verb (e.g. broken plate) and one without (e.g. intact plate). The study found that three-year-olds looked at and pointed to the rigth object in affirmative and negative trials about 80% of the times. Two-year-olds, however, were at chance unless affirmative trials preceded negative trials, in which case, they were also successful about 80% of the times. Notice that both eye-tracking studies differed from other studies on almost all dimensions. They used negative morphemes (*no* and *didn't*) as well as compositional structures (object relative clause and transitive verbs) not tested before. They also differed from each other on these dimensions except for what they used as the dependent measure (i.e. eye-gaze). Nevertheless with respect to the general issue of comprehension of negation, @reuter2018no provide success with the auxiliary negation *didn't* and transitive verbs at three-years old as well as 2;5-2;9, with the caveat that children should first see the positive form.
+
+<!-- locatives and search behavior -->
+Two studies have focused on early comprehension of negation with locative prepositions. @austin2014denial tested 126 English-speaking children between the ages of 1;8 and 2;6. The dependent measure was children's searching behavior in two hiding locations: a house and a bucket. One experimenter hid a wooden block and another asked: "Is it in the ... (e.g. bucket)?" The first experimenter responded using gustures (head nod vs. head shake), single words (yes vs. no), or verb phrase negation (e.g. "it's in the bucket" vs. "it's not in the bucket"). The study found that only the oldest age group (2;4-2;6) successfully used all forms of negation (gestural, single word, or sentential) to infer the correct location. The middle age group (2;0-2;2) succesfully interpreted single word and verb phrase negation but not gestural negation (head shakes). Surprisingly, children's performance was better with negative than positive statements even in the oldest age group. However, this surprising finding was not replicated by @feiman2017nonot who independently came up with the same paradigm as @austin2014denial. @feiman2017nonot found successful comprehension of affirmative locatives as well as negative locatives with *no* and *not* among children between 2;2-2;4. Younger children (1;7-2;1) were successful with affirmatives but not negatives. Most importantly, the youngest group (1;7-1;10) interpreted negatives like affirmatives, suggesting they ignored the negative morpheme on average. Finally, in their last experiment @feiman2017nonot showed the youngest group which container was empty and found that they had no problem finding the hidden object when they had visual information of absence. This provides evidence that the failure of the youngest group in the task is not due to task demands.
+
+To summarize, previous research has provided evidence on what types of tasks have a better chance of capturing children's competence with negation. Specifically, tasks that do not rely on metalinguistic judgments, do not require children to attend to multiple objects or carry out several actions, and tasks that introduce the positive forms first fair better. The literature has also provided converging evidence that around two and a half years of age, children understand both negative response particles (i.e. *no*, *nein*) and verb phrase negation (i.e. *not*) in combination with identity predicates and locative prepositions. @hummer1993origins showed this for German *nein* and identity predicates at 2;4-2;7. @deVilliersFlusberg1975 showed success wtih *not* and identity predicates in the same age range with a production task. @austin2014denial and @feiman2017nonot provide evidence for English *no* and *not* in combination with locative prepositions at 2;3. Is it possible that negation in combination with identity predicates and locative prepositions are known earlier than our experiments have managed to capture so far? 
+
+Using a word learning paradigm, @deCarvalhoEtal2017 provide evidence for comprehension with identity predicates in 18-month-olds. During habituation, toddlers saw a pinguin spinning and heard "Look, It's a bamoule!". This would help them learn the novel noun *bamoule* as "pinguin". Then they saw the pinguin cartwheeling and heard "Look! She's pirdaling!". This helped them learn the novel verb *pirdale* as "cartwheeling". During the test phase, they added negation to the sentences and also switched the videos. Half of the children saw the pinguin spinning and heard "Look! She is not pirdaling" (which is true if pridaling is learned as cartwheeling) and half saw the pinguin cartwheeling and heard "Look! It's not a bamoule!" (which is false if *bamoule* is learned as pinguin). @deCarvalhoEtal2017 found that 18-month-olds looked longer to the trials where negation was false than those in which negation was true. In the next section, we explain how our experiments build on @deCarvalhoEtal2017 and extend it beyond labeling speech acts.
+
 <!--
-DIMENTION 1 = NEGATION TYPE
-No: Austin, Theakston, Lieven, & Tomasello (2014), Feiman, Mody, Sanborn, and Carey (2017); Nordmeyer and Frank (2014)
-Not: Donaldson (1970), De Villier and Flusberg (1975), Pea (1980;1982), Kim (1985), Austin, Theakston, Lieven, & Tomasello (2014), Feiman, Mody, Sanborn, and Carey (2017), 
-didn't: Reuter, Feiman, Snedeker (2018)
-pas: de Carvalho, Barrault, and Christophe (2017)
+Lessons:
+- In order to assess how abstract and combinatorial children's understanding of negation is, we need to test their comprehension with a variety of arguments negative forms compose with. Only then we can estimate the abstractness of its meaning in early childhood. This study is a first step in that direction.
+- In order to achieve this goal, we need to pick one dependent measure, a similar task, and vary types of negation and types of arguments it composes with
+- Given de Carvalho's claim it seems like looking time is the best bet at the age that early mappings for negation are formed
 
-DIMENTION 2 = ARGUMENT TYPE
-Predicative NP + not: De Villier and Flusberg (1975), Pea (1980;1982), Kim (1985), de Carvalho, Barrault, and Christophe (2017)
-Locative-PP + No/Not: Feiman, Mody, Sanborn, and Carey (2017), Austin, Theakston, Lieven, & Tomasello (2014)
-Transitive-Verb + didn't: Reuter, Feiman, Snedeker (2018)
-Det-No + Noun: Nordmeyer and Frank (2014)
-
-DIMENTION 2 = METHOD
-Picture verification + sentence-completion: Donaldson (1970), De Villier and Flusberg (1975)
-Picture verification + judgments: Slobin (1966), Kim (1985)
-Picture verification + spontaneous feedback: Pea (1980; 1982) 
-Picture verificatioin + eye-tracking: Reuter, Feiman, Snedeker (2018), Nordmeyer and Frank (2014)
-Hide-and-seek with search behavior: Feiman, Mody, Sanborn, and Carey (2017), Austin, Theakston, Lieven, & Tomasello (2014)
-Picture verification with looking-time: de Carvalho, Barrault, and Christophe (2017)
-
-Other: Donaldson (1970) - Hummer, Wimmer, & Antes (1993)
+Lessons:  Looking time and habituation has provided earliest success so far. 1;7-2;1 were shown to be not successful with locative negatives. Even 18-month-olds were successful with identity negatives. With transitive negatives we have had success at 2;5-2;9 but we do not know about earlier. The current picture is one where identity negation emerges first. However, the relevant studies use different paradigms and dependent measures. In order to be able to see producitivty of early negation, we need to test identity, locative, and transitive negatives within the same paradigm. This is what this study aims for
 -->
-
-Research on comprehension of negation has used multiple methods tested children's comprehension using differentiof negated identity (e.g. *this is not a banana*), negated location (**)
-
-Slobin (1966) was the first to test children's comprehension of negation. He used a sentence verification task in which participants saw a picture, heard a positive or a negative sentence, and had to press one of two buttons to determine wehther the sentence was "right" or "wrong". 
-
-Unfortunately Slobin did not report the details of data on children's errors. This is what Donaldson (1970) did and reported that five-year-olds make substantial errors. 
-
-De Villier and Flusberg (1975) imrpoved on Donaldson's work and showed much earlier comprehension.
-
-Pea (1982) and Kim (1985) were the first to talk about truth-functional negation and test it experimentally. 
-
-Austin, Theakston, Lieven, & Tomasello (2014) pointed out that there may be pragmatic issues with denial negation in picture verification tasks. Instead they advocated for information regarding location of nonvisible objects. 
-
-Feiman, Mody, Sanborn, and Carey (2017)
-
-Reuter, Feiman, Snedeker (2018)
-
-de Carvalho, Barrault, and Christophe (2017) tested comprehension of French negation in 18-month-olds using a word learning paradigm. 
-
-The trend in experimental research on comprehension of negation in children has been one of improving methods and capturing earlier comprehension than before. 
 
 ## Current Study
 
-This study tests toddler's comprehension of verbal negation in sentences that deny the identity of an entity (e.g. *this is not a cat*). 
+We first start by conceptually replicating the findings of @deCarvalhoEtal2017 in Experiment 1. In Experiment 2, we extend our paradigm to test comprehension of negation with locative prepositions. Experiment 3 tests toddler's comprehension of negation in transitive sentences. The goal is to see whether comprehension of negation is specific to labeling events or if it can generalize across compositional contexts.  
 
 # Experiment 1
 
-In the first experiment we focused on todders' ability to react to the truth altering property of negation. We habituated toddlers to positive and truth-preserving adverbs like *really* as in "this is really a dog". Then we tested them with either the similar adverb *now* or the negative and truth-altering adverb *not*. We predicted that if toddlers are sensitive to the functional role of negation in altering the truth conditions of statemets, they should dishabituate when they notice the change in truth conditions that no longer match visual stimuli truthfully.
+This experiment focuses on todders' ability to react to the truth altering property of negation with identity predicates. We habituated toddlers to positive and truth-preserving adverbs like *really* as in "this is really a dog". Then we tested them with either the similar truth-preserving adverb *now* or the negative and truth-altering adverb *not*. We predicted that if toddlers are sensitive to the functional role of negation in altering the truth conditions of statemets, they should dishabituate when they notice the change in truth conditions.
 
 ## Methods
 
@@ -138,6 +143,10 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 ## Discussion
 
 # Experiment 2
+
+# Experiment 3
+
+# General Discussion
 
 # Appendix
 
