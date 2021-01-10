@@ -1,24 +1,24 @@
 dataColumns,"['sNum', 'sID', 'months', 'days', 'sex', 'cond', 'condLabel', 'trial', 'GNG', 'trialType', 'stimName', 'habCrit', 'habTrialNo', 'sumOnA', 'numOnA', 'sumOffA', 'numOffA', 'sumOnB', 'numOnB', 'sumOffB', 'numOffB']"
 prefix,LOGN2
 dataloc,data/
-maxDur,{'really': 60.0}
-playThrough,{'really': 0}
+maxDur,"{'Hab': 60.0, 'test': 60.0}"
+playThrough,"{'Hab': 0, 'test': 0}"
 movieEnd,[]
-maxOff,{'really': 2.0}
-minOn,{'really': 0.0}
+maxOff,"{'Hab': 2.0, 'test': 2.0}"
+minOn,"{'Hab': 0.0, 'test': 0.0}"
 blindPres,0
 autoAdvance,[]
-randPres,0
+randPres,True
 condPath,
-condFile,
-condList,[]
+condFile,conditions2.csv
+condList,"['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30']"
 baseCondFile,
 baseCondList,[]
-trialTypes,['really']
-trialOrder,['really']
+trialTypes,"['Hab', 'test']"
+trialOrder,"['Hab', 'test', 'test', 'test']"
 blockList,{}
 blockDataList,[]
-maxHabTrials,14
+maxHabTrials,12
 setCritWindow,3
 setCritDivisor,2.0
 setCritType,First
@@ -30,8 +30,8 @@ habTrialList,[]
 calcHabOver,[]
 stimPres,0
 stimPath,stimuli/
-stimNames,{'really': ['reallyBall']}
-stimList,"{'reallyBall': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/really_ball.wav', 'imageLoc': 'stimuli/ball.jpg'}}"
+stimNames,"{'Hab': ['reallyBall', 'reallyDuck', 'reallyShoe', 'indeedBall', 'indeedDuck', 'indeedShoe', 'justBall', 'justDuck', 'justShoe', 'onlyBall', 'onlyDuck', 'onlyShoe'], 'test': ['notBall', 'notDuck', 'notShoe', 'nowBall', 'nowDuck', 'nowShoe']}"
+stimList,"{'reallyBall': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/really_ball.wav', 'imageLoc': 'stimuli/ball.jpg'}, 'reallyDuck': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/really_duck.wav', 'imageLoc': 'stimuli/duck.jpg'}, 'reallyShoe': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/really_shoe.wav', 'imageLoc': 'stimuli/shoe.jpg'}, 'onlyBall': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/only_ball.wav', 'imageLoc': 'stimuli/ball.jpg'}, 'onlyDuck': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/only_duck.wav', 'imageLoc': 'stimuli/duck.jpg'}, 'onlyShoe': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/only_shoe.wav', 'imageLoc': 'stimuli/shoe.jpg'}, 'justBall': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/just_ball.wav', 'imageLoc': 'stimuli/ball.jpg'}, 'justDuck': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/just_duck.wav', 'imageLoc': 'stimuli/duck.jpg'}, 'justShoe': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/just_shoe.wav', 'imageLoc': 'stimuli/shoe.jpg'}, 'indeedBall': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/indeed_ball.wav', 'imageLoc': 'stimuli/ball.jpg'}, 'indeedDuck': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/indeed_duck.wav', 'imageLoc': 'stimuli/duck.jpg'}, 'indeedShoe': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/indeed_shoe.wav', 'imageLoc': 'stimuli/shoe.jpg'}, 'nowBall': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/now_ball.wav', 'imageLoc': 'stimuli/ball.jpg'}, 'nowDuck': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/now_duck.wav', 'imageLoc': 'stimuli/duck.jpg'}, 'nowShoe': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/now_shoe.wav', 'imageLoc': 'stimuli/shoe.jpg'}, 'notBall': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/not_ball.wav', 'imageLoc': 'stimuli/ball.jpg'}, 'notDuck': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/not_duck.wav', 'imageLoc': 'stimuli/duck.jpg'}, 'notShoe': {'stimType': 'Image with audio', 'audioLoc': 'stimuli/not_shoe.wav', 'imageLoc': 'stimuli/shoe.jpg'}}"
 screenWidth,1080
 screenHeight,700
 screenColor,black
@@ -39,11 +39,11 @@ movieWidth,800
 movieHeight,600
 screenIndex,1
 expScreenIndex,0
-ISI,{'really': 0.0}
+ISI,"{'Hab': 60.0, 'test': 60.0}"
 freezeFrame,0.0
-playAttnGetter,{'really': 'PyHabDefault'}
+playAttnGetter,"{'really': 'PyHabDefault', 'only': 'PyHabDefault', 'just': 'PyHabDefault', 'indeed': 'PyHabDefault', 'now': 'PyHabDefault', 'not': 'PyHabDefault', 'hello': 'PyHabDefault', 'Hab': 'PyHabDefault', 'test': 'PyHabDefault'}"
 attnGetterList,"{'PyHabDefault': {'stimType': 'Audio', 'stimName': 'upchime1.wav', 'stimDur': 2, 'stimLoc': 'stimuli/attnGetters/upchime1.wav', 'shape': 'Rectangle', 'color': 'yellow'}}"
-folderPath,/Users/annika/Documents/LDS/Toddler Negation Study/negation_comprehension/LOGN2/
+folderPath,/Users/annika/Documents/LDS/LOGN/negation_comprehension/LOGN2/
 prefLook,0
 startImage,
 endImage,

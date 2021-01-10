@@ -1,0 +1,2 @@
+sNum,sID,months,days,sex,cond,condLabel,trial,GNG,trialType,stimName,habCrit,habTrialNo,sumOnA,numOnA,sumOffA,numOffA,sumOnB,numOnB,sumOffB,numOffB
+test5,5,240,9,,"{'Hab': ['onlyDuck', 'onlyBall', 'onlyShoe', 'justBall', 'justDuck', 'justShoe', 'reallyShoe', 'reallyDuck', 'reallyBall', 'indeedBall', 'indeedDuck', 'indeedShoe'], 'test': ['nowDuck', 'nowBall', 'nowShoe']}",1,1,1,Hab,onlyDuck,0,1,2.05809637999846,2,2.852293452997401,2,0,0,4.910391673998674,1
